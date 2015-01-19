@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>css 3d | Richie 个人记忆</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="透视
+激活 3d空间，需要元素有透视效果。可以有两个方式让元素具有透视效果：使用 transform 属性，它拥有 perspective 功能函数。
+transform: perspective(600px);
+或者使用 perspective 属性。
+perspective: 600px
+这两种方式都触发一个 3d空间，但是有一个区别。使用 perspective 功能函数可以方便应用 3d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css 3d">
+<meta property="og:url" content="http://yuqigong.github.io/2014/07/14/css-3d/">
+<meta property="og:site_name" content="Richie 个人记忆">
+<meta property="og:description" content="透视
+激活 3d空间，需要元素有透视效果。可以有两个方式让元素具有透视效果：使用 transform 属性，它拥有 perspective 功能函数。
+transform: perspective(600px);
+或者使用 perspective 属性。
+perspective: 600px
+这两种方式都触发一个 3d空间，但是有一个区别。使用 perspective 功能函数可以方便应用 3d">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css 3d">
+<meta name="twitter:description" content="透视
+激活 3d空间，需要元素有透视效果。可以有两个方式让元素具有透视效果：使用 transform 属性，它拥有 perspective 功能函数。
+transform: perspective(600px);
+或者使用 perspective 属性。
+perspective: 600px
+这两种方式都触发一个 3d空间，但是有一个区别。使用 perspective 功能函数可以方便应用 3d">
+
+  
+    <link rel="alternative" href="/atom.xml" title="Richie 个人记忆" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Richie 个人记忆</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yuqigong.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-css-3d" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/07/14/css-3d/" class="article-date">
+  <time datetime="2014-07-14T14:46:25.000Z" itemprop="datePublished">7月 14 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      css 3d
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="透视">透视</h2>
+<p>激活 <em>3d空间</em>，需要元素有透视效果。可以有两个方式让元素具有透视效果：使用 transform 属性，它拥有 perspective 功能函数。</p>
+<pre><code><span class="attribute">transform</span><span class="value">: <span class="function">perspective</span>(<span class="number">600px</span>);</span>
+</code></pre><p>或者使用 perspective 属性。</p>
+<pre><code><span class="attribute">perspective</span>: <span class="string">600px</span>
+</code></pre><p>这两种方式都触发一个 <em>3d空间</em>，但是有一个区别。使用 perspective 功能函数可以方便应用 3d 变换一个元素。但是当应用在多个元素，转换后的元素不会按预计的排列。<strong>如果你使用相同的变换应用在不同的元素上，每个元素都会有自己的消失点</strong>。为了补救这个问题，在父级元素使用 perspective 属性，这样每个子元素都可以共享相同的 <em>3d空间</em>。</p>
+<p>perspective 的值决定了 3d 效果的强度。把它看作一个对象与观众的距离。值越大，则距离越远，视觉效果也越不强烈。<code>perspective: 2000px</code> 产生一个巨大的 3d效果，像一个小虫观看巨大的物体。</p>
+<p>默认情况下,消失点的位置在三维空间定位的中心。你可以通过属性 perspective-origin 改变消失点的位置。</p>
+<p>reference:</p>
+<p><a href="http://desandro.github.io/3dtransforms/" target="_blank" rel="external">Intro to CSS 3D transforms</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yuqigong.github.io/2014/07/14/css-3d/" data-id="mmnurwrevmk32a8z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/08/14/css-triangle/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          css triangle
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/07/13/android-install/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Android 模拟器安装过程</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/12/30/sublime-plugin/">Sublime Text 学习笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2014/12/29/nginx/">nginx 学习</a>
+          </li>
+        
+          <li>
+            <a href="/2014/12/24/mac-command/">mac环境下命令的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2014/12/23/ie-filter-transition/">ie视觉滤镜和动画效果</a>
+          </li>
+        
+          <li>
+            <a href="/2014/12/19/ie6-select/">ie6 select 覆盖层问题</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Richie<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
