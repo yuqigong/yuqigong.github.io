@@ -3,26 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Android 模拟器安装过程 | Richie 个人记忆</title>
+  <title>Tag: mac | Richie 个人记忆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="配置 java 环境
-[java 下载](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-新建环境变量（*Path* \ *CLASSPATH* \ *JAVA_HOME*）[参考](http://www.cnblogs.com/cc11cc/archive/2012/11/08/2759027.html)
-安">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Android 模拟器安装过程">
-<meta property="og:url" content="http://yuqigong.github.io/2014/07/13/android-install/">
+  <meta name="description" content="生活、工作、学习，点滴记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Richie 个人记忆">
+<meta property="og:url" content="http://yuqigong.github.io/tags/mac/">
 <meta property="og:site_name" content="Richie 个人记忆">
-<meta property="og:description" content="配置 java 环境
-[java 下载](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-新建环境变量（*Path* \ *CLASSPATH* \ *JAVA_HOME*）[参考](http://www.cnblogs.com/cc11cc/archive/2012/11/08/2759027.html)
-安">
+<meta property="og:description" content="生活、工作、学习，点滴记录">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android 模拟器安装过程">
-<meta name="twitter:description" content="配置 java 环境
-[java 下载](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-新建环境变量（*Path* \ *CLASSPATH* \ *JAVA_HOME*）[参考](http://www.cnblogs.com/cc11cc/archive/2012/11/08/2759027.html)
-安">
+<meta name="twitter:title" content="Richie 个人记忆">
+<meta name="twitter:description" content="生活、工作、学习，点滴记录">
 
   
     <link rel="alternative" href="/atom.xml" title="Richie 个人记忆" type="application/atom+xml">
@@ -69,10 +60,12 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-android-install" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-mac-command" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/07/13/android-install/" class="article-date">
-  <time datetime="2014-07-13T12:46:25.000Z" itemprop="datePublished">7月 13 2014</time>
+    <a href="/2014/12/24/mac-command/" class="article-date">
+  <time datetime="2014-12-24T14:46:25.000Z" itemprop="datePublished">12月 24 2014</time>
 </a>
     
   </div>
@@ -82,8 +75,8 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Android 模拟器安装过程
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/24/mac-command/">mac环境下命令的使用</a>
     </h1>
   
 
@@ -91,55 +84,109 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="配置_java_环境">配置 java 环境</h3>
-<pre><code>[<span class="link_label">java 下载</span>](<span class="link_url">http://www.oracle.com/technetwork/java/javase/downloads/index.html</span>)
-新建环境变量（<span class="emphasis">*Path*</span> \ <span class="emphasis">*CLASSPATH*</span> \ <span class="emphasis">*JAVA_HOME*</span>）[<span class="link_label">参考</span>](<span class="link_url">http://www.cnblogs.com/cc11cc/archive/2012/11/08/2759027.html</span>)
-</code></pre><h3 id="安装_Android_SDK_Manager">安装 Android SDK Manager</h3>
-<pre><code>[<span class="link_label">Android SDK Manager 下载</span>](<span class="link_url">http://developer.android.com/sdk/index.html</span>)
-</code></pre><p>下载可能出现问题，需要在 <em>hots</em> 里面修改，如下</p>
-<pre><code><span class="number">74.125</span>.<span class="number">237.1</span>    <span class="keyword">dl</span>-ssl.google.<span class="keyword">com</span>
-<span class="number">203.208</span>.<span class="number">46.146</span>    <span class="keyword">dl</span>.google.<span class="keyword">com</span>
-<span class="number">203.208</span>.<span class="number">46.146</span>    <span class="keyword">dl</span>-ssl.google.<span class="keyword">com</span>
-</code></pre><p>除了修改 <em>hots</em> 还需要设置 Android SDK Manager <a href="http://jingyan.baidu.com/article/8275fc86dbe84046a03cf69d.html" target="_blank" rel="external">参考</a></p>
-<h3 id="创建_Android_Virtual_Device">创建 Android Virtual Device</h3>
-<p>可能会遇到这样的问题 <em>panic:could not open:XXX(设备名称)</em>，解决如下：</p>
-<pre><code>新建环境变量： <span class="emphasis">*ANDROID_SDK_HOME*</span>
-路径可以自定义，不可出现中文，例如：D:\Program Files\Android [<span class="link_label">参考</span>](<span class="link_url">http://jingyan.baidu.com/article/91f5db1beb12d41c7f05e39f.html</span>)
-</code></pre><h3 id="其他内容">其他内容</h3>
-<p><a href="http://www.cnblogs.com/meil/archive/2012/05/24/2516055.html" target="_blank" rel="external">Android开发调试工具ADB的使用</a></p>
-<p><a href="http://www.crifan.com/android_emulator_run_too_slow_in_debug_mode/" target="_blank" rel="external">Android的模拟器，在ADT中调试运行AVD时，速度太慢，极其的慢</a></p>
-<p><a href="http://software.intel.com/zh-cn/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-windows-cn" target="_blank" rel="external">英特尔®硬件加速执行管理器安装指南</a></p>
-<p><a href="http://envyandroid.com/archives/794/intel-haxm-hardware-acceleration-on-android-emulator" target="_blank" rel="external">Use Intel HAXM Hardware acceleration to drastically speed up your Android emulator</a></p>
+        <pre><code>ls -l -a   列出指定目录下文件
+           -l 显示文件的详细信息
+           -a 显示目录下所有文件（包括隐藏文件）
+           -d 显示指定目录pwd  显示当前的工作目录的路径
+cd 切换工作目录
+. 表示当前目录
+.. 表示当前目录的上一级目录
+/  根目录/目录分隔符
+./         当前目录
+../        回到上一级目录
+相对路径/绝对路径 凡是以/开始的路径，都是绝对路径
+cd .. 进入上一级目录
+cd 加波浪符号：进入当前登陆用户目录下
+mkdir：创建新目录
+<span class="symbol">rmdir:</span>只能删除空目录
+cat 文件名.txt <span class="symbol">:</span>查看指定文本文件的内容（适合查看小文件）
+more 分屏暂停显示文本文件内容
+diff/vimdiff   比较两个文件
+touch 目录名：查看指定文件，若没有此文件则创建空文件；更改文件时间戳
+chmod 更改指定文件或目录的权限
+属主  属组  其他人
+rwx   rwx    rwx
+<span class="number">421</span>   <span class="number">421</span>    <span class="number">421</span>
+<span class="number">2</span>^<span class="number">2</span>+<span class="number">2</span>^<span class="number">1</span>+<span class="number">2</span>^<span class="number">0</span>
+chmod u-x,g-wx,o=- file 表示属主用户对file文件没有可执行操作权限；属组用户对file文件没有可读，可执行权限；其他人对file文件没有权限。
+<span class="input"><span class="prompt">ps aux 静态查看进程
+top 动态查看进程
+echo:输出字符串或变量值
+&gt;</span>   指定的文件若不存在，创建文件；若存在，覆盖原文件内容</span>
+<span class="input"><span class="prompt">输出重定向符
 
+&gt;&gt;</span>  指定的文件若不存在，创建文件；若存在，在原文件内容后追加内容</span>
+<span class="input"><span class="prompt">
+区别
+  echo “字符串” &gt;</span> file</span>
+<span class="input"><span class="prompt">
+  echo “字符串” &gt;&gt;</span> file</span>
+kill 杀死进程
+kill -<span class="number">9</span> pid       杀死指定进程
+man  显示帮助文件（按q退出）
+ifconfig 查看或修改ip地址
+sudo 以root权限执行一次命令
+clear / ctrl+<span class="constant">L</span>   清屏
+ctrl+<span class="constant">C</span>     无条件终止
+rm –rf * 强制删除当前目录下所有文件
+rm -rf        删除文件或目录
+cp -r         复制文件
+mv         移动文件
+stat 文件名  查看文件详细信息
+find  查找文件
+find / -name *       查找文件
+
+
+在编辑文件内容时快捷键的使用：
+a  在光标下一个字符处插入
+i  在光标处插入
+o  在光标所在行下一行插入一个新行
+r 替换光标所在字符
+<span class="constant">R</span>  进入到替换模式
+dd  剪切光标所在的一行内容
+ndd  剪切从光标所在行开始后的<span class="constant">N</span>行内容
+yy   复制光标所在的一行内容
+nyy  复制从光标所在行开始后的<span class="constant">N</span>行内容
+p   粘贴到光标所在行
+<span class="constant">D</span>   删除光标右边的所有内容
+x   删除光标所在字符
+gg 将光标快速移动到文件首
+<span class="constant">G</span>  将光标快速移动到文件尾
+零  将光标快速移动到行首
+<span class="variable">$ </span>  将光标快速移动到行尾
+/n         查找内容 n跳到下一项
+gg=<span class="constant">G</span> 段落对齐
+<span class="symbol">:set</span> nu 设置行号
+<span class="symbol">:set</span> nonu   取消行号
+<span class="symbol">:</span>行号   定位到指定行
+u    撤销
+<span class="symbol">:x</span>   相当于<span class="symbol">:wq</span>
+<span class="symbol">:w</span>   保存
+<span class="symbol">:q</span>   未保存直接退出
+<span class="symbol">:wq</span>  保存并退出
+<span class="symbol">:w!</span>  强制保存
+<span class="symbol">:q!</span>  强制退出
+<span class="symbol">:wq!</span> 强制保存退出
+<span class="symbol">:X!</span>  强制保存退出
+<span class="symbol">:syntax</span> on/off 开启/关闭语法提示
+shell的意外关闭 .*.swp （首先用ls –a 命令找到相应的.*.swp文件，然后删除.*.swp文件）
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yuqigong.github.io/2014/07/13/android-install/" data-id="rgkbf7v8sf61ygiz" class="article-share-link">Share</a>
+      <a data-url="http://yuqigong.github.io/2014/12/24/mac-command/" data-id="5snp01m8kewya9ju" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobile/">mobile</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li></ul>
 
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2014/07/14/css-3d/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          css 3d
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
 </article>
 
+
+  
+  
 </section>
         
           <aside id="sidebar">

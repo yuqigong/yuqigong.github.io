@@ -3,32 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>css 3d | Richie 个人记忆</title>
+  <title>Tag: css | Richie 个人记忆</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="透视
-激活 3d空间，需要元素有透视效果。可以有两个方式让元素具有透视效果：使用 transform 属性，它拥有 perspective 功能函数。
-transform: perspective(600px);
-或者使用 perspective 属性。
-perspective: 600px
-这两种方式都触发一个 3d空间，但是有一个区别。使用 perspective 功能函数可以方便应用 3d">
-<meta property="og:type" content="article">
-<meta property="og:title" content="css 3d">
-<meta property="og:url" content="http://yuqigong.github.io/2014/07/14/css-3d/">
+  <meta name="description" content="生活、工作、学习，点滴记录">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Richie 个人记忆">
+<meta property="og:url" content="http://yuqigong.github.io/tags/css/">
 <meta property="og:site_name" content="Richie 个人记忆">
-<meta property="og:description" content="透视
-激活 3d空间，需要元素有透视效果。可以有两个方式让元素具有透视效果：使用 transform 属性，它拥有 perspective 功能函数。
-transform: perspective(600px);
-或者使用 perspective 属性。
-perspective: 600px
-这两种方式都触发一个 3d空间，但是有一个区别。使用 perspective 功能函数可以方便应用 3d">
+<meta property="og:description" content="生活、工作、学习，点滴记录">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css 3d">
-<meta name="twitter:description" content="透视
-激活 3d空间，需要元素有透视效果。可以有两个方式让元素具有透视效果：使用 transform 属性，它拥有 perspective 功能函数。
-transform: perspective(600px);
-或者使用 perspective 属性。
-perspective: 600px
-这两种方式都触发一个 3d空间，但是有一个区别。使用 perspective 功能函数可以方便应用 3d">
+<meta name="twitter:title" content="Richie 个人记忆">
+<meta name="twitter:description" content="生活、工作、学习，点滴记录">
 
   
     <link rel="alternative" href="/atom.xml" title="Richie 个人记忆" type="application/atom+xml">
@@ -75,7 +60,129 @@ perspective: 600px
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-css-3d" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-ie-filter-transition" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/23/ie-filter-transition/" class="article-date">
+  <time datetime="2014-12-23T14:46:25.000Z" itemprop="datePublished">12月 23 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/23/ie-filter-transition/">ie视觉滤镜和动画效果</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>参考：<a href="http://msdn.microsoft.com/en-us/library/ie/ms532853(v=vs.85" target="_blank" rel="external">Visual Filters and Transitions Reference</a>.aspx)、<a href="http://samples.msdn.microsoft.com/workshop/samples/author/dhtml/DXTidemo/DXTidemo.htm" target="_blank" rel="external">滤镜在线预览</a>、<a href="http://samples.msdn.microsoft.com/workshop/samples/author/dhtml/filters/matrix.htm" target="_blank" rel="external">Matrix 在线预览</a>、<a href="http://msdn.microsoft.com/en-us/library/ie/ms533035(v=vs.85" target="_blank" rel="external">Introduction to Filters and Transitions</a>.aspx)</p>
+<p>注意：<strong>An object must have layout for the filter to render.</strong> A simple way to accomplish this is to give the element a specified height and width, or both. However, there are several other properties that can give an element layout. For more information about these other properties, see the <strong><a href="http://msdn.microsoft.com/en-us/library/ie/ms530764(v=vs.85" target="_blank" rel="external">hasLayout</a>.aspx)</strong> property.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yuqigong.github.io/2014/12/23/ie-filter-transition/" data-id="d6poux63s7kxd0g5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-ie6-select" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/19/ie6-select/" class="article-date">
+  <time datetime="2014-12-19T14:46:25.000Z" itemprop="datePublished">12月 19 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/19/ie6-select/">ie6 select 覆盖层问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>介绍：ie6 下 select z-index 有bug，导致层不能覆盖其上<br>目标：解决 ie6 下层不能覆盖在 select 上<br>原理：利用元素 <strong>iframe</strong> 可以覆盖 <strong>select</strong> 的特性<br>已知问题：需要多余的标签，还需要使用滤镜、以及指定大小<br>其他：解决这个问题的基础是要用到 <strong>iframe</strong> ，也可以用 <strong>iframe</strong> 去包裹 <strong>select</strong>，另外，jQuery 上有一个插件 <a href="http://plugins.jquery.com/bgiframe/" target="_blank" rel="external">bgiframe</a> 也可以解决这个bug。<br>备注：顺便提一下，<strong>iframe</strong> 在ie中存在属性 <em>allowTransparency</em> 通过这个属性可以设置 <strong>iframe</strong> 为透明的。<br>参考：<a href="http://twinkleliang.iteye.com/blog/1138841" target="_blank" rel="external">使用Iframe解决IE6下Div/UL/Li 挡不住Select box 的3法</a></p>
+<p>代码示例，</p>
+<script src="https://gist.github.com/flyfishtome/3820685a41ca44984d59.js"></script>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yuqigong.github.io/2014/12/19/ie6-select/" data-id="2r1ch8wmgiu7exy9" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-css-triangle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/08/14/css-triangle/" class="article-date">
+  <time datetime="2014-08-14T14:46:25.000Z" itemprop="datePublished">8月 14 2014</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/08/14/css-triangle/">css triangle</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>介绍：css 画三角形<br>目标：为兼容主流浏览器和ie系列<br>原理：利用元素 <strong>border</strong> 属性<br>已知问题：ie下以及老旧的浏览器下会存在锯齿、可能还需要 <strong>css hack</strong> 来解决视觉显示问题</p>
+<p>代码示例，</p>
+<script src="https://gist.github.com/flyfishtome/94628ca6d7dfa681dac2.js"></script>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yuqigong.github.io/2014/08/14/css-triangle/" data-id="buotqtiv0vmlpsjx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-css-3d" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/07/14/css-3d/" class="article-date">
   <time datetime="2014-07-14T14:46:25.000Z" itemprop="datePublished">7月 14 2014</time>
@@ -88,8 +195,8 @@ perspective: 600px
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      css 3d
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/14/css-3d/">css 3d</a>
     </h1>
   
 
@@ -119,29 +226,11 @@ perspective: 600px
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2014/08/14/css-triangle/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          css triangle
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/07/13/android-install/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Android 模拟器安装过程</div>
-    </a>
-  
-</nav>
-
-  
 </article>
 
+
+  
+  
 </section>
         
           <aside id="sidebar">
