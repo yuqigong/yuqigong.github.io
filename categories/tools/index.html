@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>ie6 select 覆盖层问题 | Richie&#39;s memoirs</title>
+  <title>Category: tools | Richie&#39;s memoirs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介绍：ie6 下 select z-index 有bug，导致层不能覆盖其上目标：解决 ie6 下层不能覆盖在 select 上原理：利用元素 iframe 可以覆盖 select 的特性已知问题：需要多余的标签，还需要使用滤镜、以及指定大小其他：解决这个问题的基础是要用到 iframe ，也可以用 iframe 去包裹 select，另外，jQuery 上有一个插件 bgiframe 也可以解决">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ie6 select 覆盖层问题">
-<meta property="og:url" content="http://yuqigong.github.io/2014/12/19/ie6-select/">
+  <meta name="description" content="life & work & learn">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Richie's memoirs">
+<meta property="og:url" content="http://yuqigong.github.io/categories/tools/">
 <meta property="og:site_name" content="Richie's memoirs">
-<meta property="og:description" content="介绍：ie6 下 select z-index 有bug，导致层不能覆盖其上目标：解决 ie6 下层不能覆盖在 select 上原理：利用元素 iframe 可以覆盖 select 的特性已知问题：需要多余的标签，还需要使用滤镜、以及指定大小其他：解决这个问题的基础是要用到 iframe ，也可以用 iframe 去包裹 select，另外，jQuery 上有一个插件 bgiframe 也可以解决">
+<meta property="og:description" content="life & work & learn">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ie6 select 覆盖层问题">
-<meta name="twitter:description" content="介绍：ie6 下 select z-index 有bug，导致层不能覆盖其上目标：解决 ie6 下层不能覆盖在 select 上原理：利用元素 iframe 可以覆盖 select 的特性已知问题：需要多余的标签，还需要使用滤镜、以及指定大小其他：解决这个问题的基础是要用到 iframe ，也可以用 iframe 去包裹 select，另外，jQuery 上有一个插件 bgiframe 也可以解决">
+<meta name="twitter:title" content="Richie's memoirs">
+<meta name="twitter:description" content="life & work & learn">
 
   
     <link rel="alternative" href="/atom.xml" title="Richie&#39;s memoirs" type="application/atom+xml">
@@ -64,69 +64,39 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-ie6-select" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/12/19/ie6-select/" class="article-date">
-  <time datetime="2014-12-19T14:46:25.000Z" itemprop="datePublished">12月 19 2014</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/technology/">technology</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      ie6 select 覆盖层问题
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2014" class="archive-year">2014</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/12/30/sublime-plugin/" class="archive-article-date">
+  <time datetime="2014-12-30T14:46:25.000Z" itemprop="datePublished">12月 30</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2014/12/30/sublime-plugin/">Sublime Text 学习笔记</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>介绍：ie6 下 select z-index 有bug，导致层不能覆盖其上<br>目标：解决 ie6 下层不能覆盖在 select 上<br>原理：利用元素 <strong>iframe</strong> 可以覆盖 <strong>select</strong> 的特性<br>已知问题：需要多余的标签，还需要使用滤镜、以及指定大小<br>其他：解决这个问题的基础是要用到 <strong>iframe</strong> ，也可以用 <strong>iframe</strong> 去包裹 <strong>select</strong>，另外，jQuery 上有一个插件 <a href="http://plugins.jquery.com/bgiframe/" target="_blank" rel="external">bgiframe</a> 也可以解决这个bug。<br>备注：顺便提一下，<strong>iframe</strong> 在ie中存在属性 <em>allowTransparency</em> 通过这个属性可以设置 <strong>iframe</strong> 为透明的。<br>参考：<a href="http://twinkleliang.iteye.com/blog/1138841" target="_blank" rel="external">使用Iframe解决IE6下Div/UL/Li 挡不住Select box 的3法</a></p>
-<p>代码示例，</p>
-<script src="https://gist.github.com/flyfishtome/3820685a41ca44984d59.js"></script>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yuqigong.github.io/2014/12/19/ie6-select/" data-id="m8pbd5qkl8hy7p30" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2014/12/23/ie-filter-transition/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          ie视觉滤镜和动画效果
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/12/15/git-problem-sets/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Git Problem Sets</div>
-    </a>
-  
-</nav>
-
-  
 </article>
-
+  
+  
+    </div></section>
+  
 </section>
         
           <aside id="sidebar">

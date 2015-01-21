@@ -3,26 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git 相关知识 | Richie&#39;s memoirs</title>
+  <title>Richie&#39;s memoirs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
-Git 与 Github 的区别
-Git，一个非常强大的版本管理工具。Github 则是一个基于 Git 的日益流行的开源项目托管库。Git 与 svn 的最大区别是，它的使用流程不需要联机，可以">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Git 相关知识">
-<meta property="og:url" content="http://yuqigong.github.io/2014/12/14/git-multiple-coexist/">
+  <meta name="description" content="life & work & learn">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Richie's memoirs">
+<meta property="og:url" content="http://yuqigong.github.io/page/2/">
 <meta property="og:site_name" content="Richie's memoirs">
-<meta property="og:description" content="Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
-Git 与 Github 的区别
-Git，一个非常强大的版本管理工具。Github 则是一个基于 Git 的日益流行的开源项目托管库。Git 与 svn 的最大区别是，它的使用流程不需要联机，可以">
+<meta property="og:description" content="life & work & learn">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 相关知识">
-<meta name="twitter:description" content="Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
-Git 与 Github 的区别
-Git，一个非常强大的版本管理工具。Github 则是一个基于 Git 的日益流行的开源项目托管库。Git 与 svn 的最大区别是，它的使用流程不需要联机，可以">
+<meta name="twitter:title" content="Richie's memoirs">
+<meta name="twitter:description" content="life & work & learn">
 
   
     <link rel="alternative" href="/atom.xml" title="Richie&#39;s memoirs" type="application/atom+xml">
@@ -73,7 +64,76 @@ Git，一个非常强大的版本管理工具。Github 则是一个基于 Git �
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-git-multiple-coexist" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-git-problem-sets" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/12/15/git-problem-sets/" class="article-date">
+  <time datetime="2014-12-15T14:46:25.000Z" itemprop="datePublished">12月 15 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/15/git-problem-sets/">Git Problem Sets</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>Command: git mv
+<span class="operator"><span class="keyword">Show</span>: fatal: destination <span class="keyword">exists</span>
+<span class="keyword">To</span> solve: git mv <span class="comment">--force</span>
+<span class="keyword">Describe</span>: 当重命名时，如果只是重命名文件名称的大小写，需要加上 <span class="comment">--force 参数</span>
+
+Command: git <span class="keyword">reset</span>, git clean
+<span class="keyword">Show</span>:
+<span class="keyword">To</span> solve: git <span class="keyword">reset</span> <span class="comment">--hard &amp;&amp; git clean -xdf</span>
+<span class="keyword">Describe</span>: 多余的文件且没被追踪，需要删除</span>
+</code></pre><p><strong>Problem Sets</strong></p>
+<ul>
+<li><p>warning: LF will be replaced by CRLF | fatal: CRLF would be replaced by LF</p>
+<pre><code>  在Mac上设置 <span class="variable">autocrlf =</span> input, 在Windows上设置<span class="variable">autocrlf =</span> <span class="constant">true</span>（默认值）。
+  Windows：（<span class="constant">true</span>）
+  提交时，将CRLF 转成 LF再提交；
+  切出时，自动将LF 转为 CRLF;
+
+  MAC/Linux:    (input)
+  提交时,   将CRLF 转成 LF再提交；
+  切出时，保持LF即可
+
+  这样即可保证仓库中永远都是LF. 而且在Windows工作空间都是CRLF, 在Mac/Linux工作空间都是LF.
+</code></pre><p>  <a href="http://blog.csdn.net/feng88724/article/details/11600375" target="_blank" rel="external"> [git] warning: LF will be replaced by CRLF | fatal: CRLF would be replaced by LF</a></p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yuqigong.github.io/2014/12/15/git-problem-sets/" data-id="uamtw4rufvlb6uz0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git-multiple-coexist" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/12/14/git-multiple-coexist/" class="article-date">
   <time datetime="2014-12-14T14:46:25.000Z" itemprop="datePublished">12月 14 2014</time>
@@ -90,8 +150,8 @@ Git，一个非常强大的版本管理工具。Github 则是一个基于 Git �
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Git 相关知识
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/12/14/git-multiple-coexist/">Git 相关知识</a>
     </h1>
   
 
@@ -489,29 +549,172 @@ Could not open a connection to your authentication agent
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2014/12/15/git-problem-sets/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Git Problem Sets
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/08/14/css-triangle/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">css triangle</div>
-    </a>
-  
-</nav>
+</article>
 
+
+  
+    <article id="post-css-triangle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/08/14/css-triangle/" class="article-date">
+  <time datetime="2014-08-14T14:46:25.000Z" itemprop="datePublished">8月 14 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/08/14/css-triangle/">css triangle</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>介绍：css 画三角形<br>目标：为兼容主流浏览器和ie系列<br>原理：利用元素 <strong>border</strong> 属性<br>已知问题：ie下以及老旧的浏览器下会存在锯齿、可能还需要 <strong>css hack</strong> 来解决视觉显示问题</p>
+<p>代码示例，</p>
+<script src="https://gist.github.com/flyfishtome/94628ca6d7dfa681dac2.js"></script>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yuqigong.github.io/2014/08/14/css-triangle/" data-id="8poh635japt3er5g" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
   
 </article>
 
+
+  
+    <article id="post-css-3d" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/07/14/css-3d/" class="article-date">
+  <time datetime="2014-07-14T14:46:25.000Z" itemprop="datePublished">7月 14 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/14/css-3d/">css 3d</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="透视">透视</h2>
+<p>激活 <em>3d空间</em>，需要元素有透视效果。可以有两个方式让元素具有透视效果：使用 transform 属性，它拥有 perspective 功能函数。</p>
+<pre><code><span class="attribute">transform</span><span class="value">: <span class="function">perspective</span>(<span class="number">600px</span>);</span>
+</code></pre><p>或者使用 perspective 属性。</p>
+<pre><code><span class="attribute">perspective</span>: <span class="string">600px</span>
+</code></pre><p>这两种方式都触发一个 <em>3d空间</em>，但是有一个区别。使用 perspective 功能函数可以方便应用 3d 变换一个元素。但是当应用在多个元素，转换后的元素不会按预计的排列。<strong>如果你使用相同的变换应用在不同的元素上，每个元素都会有自己的消失点</strong>。为了补救这个问题，在父级元素使用 perspective 属性，这样每个子元素都可以共享相同的 <em>3d空间</em>。</p>
+<p>perspective 的值决定了 3d 效果的强度。把它看作一个对象与观众的距离。值越大，则距离越远，视觉效果也越不强烈。<code>perspective: 2000px</code> 产生一个巨大的 3d效果，像一个小虫观看巨大的物体。</p>
+<p>默认情况下,消失点的位置在三维空间定位的中心。你可以通过属性 perspective-origin 改变消失点的位置。</p>
+<p>reference:</p>
+<p><a href="http://desandro.github.io/3dtransforms/" target="_blank" rel="external">Intro to CSS 3D transforms</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yuqigong.github.io/2014/07/14/css-3d/" data-id="fq3zjuwibucvzqdx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-android-install" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/07/13/android-install/" class="article-date">
+  <time datetime="2014-07-13T12:46:25.000Z" itemprop="datePublished">7月 13 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/learn/">learn</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/07/13/android-install/">Android 模拟器安装过程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="配置_java_环境">配置 java 环境</h3>
+<pre><code>[<span class="link_label">java 下载</span>](<span class="link_url">http://www.oracle.com/technetwork/java/javase/downloads/index.html</span>)
+新建环境变量（<span class="emphasis">*Path*</span> \ <span class="emphasis">*CLASSPATH*</span> \ <span class="emphasis">*JAVA_HOME*</span>）[<span class="link_label">参考</span>](<span class="link_url">http://www.cnblogs.com/cc11cc/archive/2012/11/08/2759027.html</span>)
+</code></pre><h3 id="安装_Android_SDK_Manager">安装 Android SDK Manager</h3>
+<pre><code>[<span class="link_label">Android SDK Manager 下载</span>](<span class="link_url">http://developer.android.com/sdk/index.html</span>)
+</code></pre><p>下载可能出现问题，需要在 <em>hots</em> 里面修改，如下</p>
+<pre><code><span class="number">74.125</span>.<span class="number">237.1</span>    <span class="keyword">dl</span>-ssl.google.<span class="keyword">com</span>
+<span class="number">203.208</span>.<span class="number">46.146</span>    <span class="keyword">dl</span>.google.<span class="keyword">com</span>
+<span class="number">203.208</span>.<span class="number">46.146</span>    <span class="keyword">dl</span>-ssl.google.<span class="keyword">com</span>
+</code></pre><p>除了修改 <em>hots</em> 还需要设置 Android SDK Manager <a href="http://jingyan.baidu.com/article/8275fc86dbe84046a03cf69d.html" target="_blank" rel="external">参考</a></p>
+<h3 id="创建_Android_Virtual_Device">创建 Android Virtual Device</h3>
+<p>可能会遇到这样的问题 <em>panic:could not open:XXX(设备名称)</em>，解决如下：</p>
+<pre><code>新建环境变量： <span class="emphasis">*ANDROID_SDK_HOME*</span>
+路径可以自定义，不可出现中文，例如：D:\Program Files\Android [<span class="link_label">参考</span>](<span class="link_url">http://jingyan.baidu.com/article/91f5db1beb12d41c7f05e39f.html</span>)
+</code></pre><h3 id="其他内容">其他内容</h3>
+<p><a href="http://www.cnblogs.com/meil/archive/2012/05/24/2516055.html" target="_blank" rel="external">Android开发调试工具ADB的使用</a></p>
+<p><a href="http://www.crifan.com/android_emulator_run_too_slow_in_debug_mode/" target="_blank" rel="external">Android的模拟器，在ADT中调试运行AVD时，速度太慢，极其的慢</a></p>
+<p><a href="http://software.intel.com/zh-cn/articles/installation-instructions-for-intel-hardware-accelerated-execution-manager-windows-cn" target="_blank" rel="external">英特尔®硬件加速执行管理器安装指南</a></p>
+<p><a href="http://envyandroid.com/archives/794/intel-haxm-hardware-acceleration-on-android-emulator" target="_blank" rel="external">Use Intel HAXM Hardware acceleration to drastically speed up your Android emulator</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yuqigong.github.io/2014/07/13/android-install/" data-id="fa9ykipb7mt8rx2e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mobile/">mobile</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
+  
 </section>
         
           <aside id="sidebar">

@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: nginx | Richie 个人记忆</title>
+  <title>Tag: nginx | Richie&#39;s memoirs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="生活、工作、学习，点滴记录">
+  <meta name="description" content="life & work & learn">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Richie 个人记忆">
+<meta property="og:title" content="Richie's memoirs">
 <meta property="og:url" content="http://yuqigong.github.io/tags/nginx/">
-<meta property="og:site_name" content="Richie 个人记忆">
-<meta property="og:description" content="生活、工作、学习，点滴记录">
+<meta property="og:site_name" content="Richie's memoirs">
+<meta property="og:description" content="life & work & learn">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Richie 个人记忆">
-<meta name="twitter:description" content="生活、工作、学习，点滴记录">
+<meta name="twitter:title" content="Richie's memoirs">
+<meta name="twitter:description" content="life & work & learn">
 
   
-    <link rel="alternative" href="/atom.xml" title="Richie 个人记忆" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Richie&#39;s memoirs" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -34,8 +34,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Richie 个人记忆</a>
+        <a href="/" id="logo">Richie&#39;s memoirs</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">There is no royal road to learning.</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -62,108 +66,49 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-nginx" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/12/29/nginx/" class="article-date">
-  <time datetime="2014-12-29T14:46:25.000Z" itemprop="datePublished">12月 29 2014</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2014" class="archive-year">2014</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/12/29/nginx/" class="archive-article-date">
+  <time datetime="2014-12-29T14:46:25.000Z" itemprop="datePublished">12月 29</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/29/nginx/">nginx 学习</a>
+      <a class="archive-article-title" href="/2014/12/29/nginx/">nginx 学习</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="nginx_命令">nginx 命令</h2>
-<p>启动</p>
-<pre><code><span class="operator"><span class="keyword">start</span> nginx</span>
-</code></pre><p>快速退出</p>
-<pre><code>nginx <span class="operator">-s</span> stop
-</code></pre><p>优雅退出</p>
-<pre><code>nginx <span class="operator">-s</span> quit
-</code></pre><p>更换配置，启动新的工作进程，优雅的关闭以往的工作进程</p>
-<pre><code>nginx <span class="operator">-s</span> reload
-</code></pre><p>重新打开日志文件</p>
-<pre><code>nginx <span class="operator">-s</span> reopen
-</code></pre><p>可以在命令行运行tasklist命令来查看nginx进程：</p>
-<pre><code>tasklist /<span class="keyword">fi</span> <span class="string">"imagename eq nginx.exe"</span>
-</code></pre><h2 id="nginx_配置">nginx 配置</h2>
-<pre><code><span class="title">http</span> {
-  <span class="title">server</span> {
-    <span class="comment">#1.侦听80端口</span>
-    <span class="title">listen</span>  <span class="number">80</span>;
-    <span class="title">location</span> / {
-        <span class="comment"># 2. 默认主页目录在nginx安装目录的html子目录。</span>
-        <span class="title">root</span>   html;
-        <span class="title">index</span>  index.html index.htm;
-        <span class="comment"># 3. 没有索引页时，罗列文件和子目录</span>
-        <span class="title">autoindex</span> <span class="built_in">on</span>;
-        <span class="title">autoindex_exact_size</span> <span class="built_in">on</span>;
-        <span class="title">autoindex_localtime</span> <span class="built_in">on</span>;
-    }
-    <span class="comment"># 4.指定虚拟目录</span>
-    <span class="title">location</span> /tshirt {
-        <span class="title">alias</span> D:\programs\Apache2\htdocs\tshirt;
-        <span class="title">index</span> index.html index.htm;
-    }
-  }
-  <span class="comment"># 5.虚拟主机www.emb.info配置</span>
-  <span class="title">server</span> {
-    <span class="title">listen</span>          <span class="number">80</span>;
-    <span class="title">server_name</span>     www.emb.<span class="built_in">info</span>;
-    <span class="title">access_log</span> emb.info/logs/access.log;
-    <span class="title">location</span> / {
-        <span class="title">index</span> index.html;
-        <span class="title">root</span>  emb.info/htdocs;
-    }
-  }
-}
-</code></pre><h2 id="nginx_issue">nginx issue</h2>
-<pre><code><span class="number">2012</span>/<span class="number">04</span>/<span class="number">02</span> <span class="number">13</span>:<span class="number">55</span>:<span class="number">59</span> [emerg] <span class="number">7864</span>#<span class="number">2376</span>: bind() <span class="keyword">to</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">80</span> failed (<span class="number">10013</span>: An attempt was made <span class="keyword">to</span> <span class="keyword">access</span> a socket <span class="keyword">in</span> a way forbidden by its <span class="keyword">access</span> permissions)
-</code></pre><p>在 cmd 中，运行以下命令：</p>
-<pre><code>netstat -aon <span class="string">| findstr :80</span>
-</code></pre><p>看到80端口果真被占用。发现占用的pid是4，名字是System。怎么禁用呢？</p>
-<p>解决办法：</p>
-<p>1、打开注册表：regedit</p>
-<p>2、找到：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\HTTP</p>
-<p>3、找到一个REG_DWORD类型的项Start，将其改为0</p>
-<p>4、重启系统，System进程不会占用80端口</p>
-<p>重启之后，start nginx.exe 。在浏览器中，输入127.0.01，即可看到亲爱的“Welcome to nginx!” 了。</p>
-<p>参考</p>
-<p><a href="http://nginx.org/cn/docs/windows.html" target="_blank" rel="external">nginx Windows版使用说明</a></p>
-<p><a href="http://koda.iteye.com/blog/601249" target="_blank" rel="external">Nginx - Windows下Nginx基本安装和配置</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yuqigong.github.io/2014/12/29/nginx/" data-id="7wu6ey1bjw9tc7d6" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
+  
+    </div></section>
   
 </section>
         
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/technology/">technology</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -231,7 +176,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2015 Richie<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Sow nothing, reap nothing.
     </div>
   </div>
 </footer>

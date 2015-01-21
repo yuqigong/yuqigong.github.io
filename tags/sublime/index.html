@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: sublime | Richie 个人记忆</title>
+  <title>Tag: sublime | Richie&#39;s memoirs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="生活、工作、学习，点滴记录">
+  <meta name="description" content="life & work & learn">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Richie 个人记忆">
+<meta property="og:title" content="Richie's memoirs">
 <meta property="og:url" content="http://yuqigong.github.io/tags/sublime/">
-<meta property="og:site_name" content="Richie 个人记忆">
-<meta property="og:description" content="生活、工作、学习，点滴记录">
+<meta property="og:site_name" content="Richie's memoirs">
+<meta property="og:description" content="life & work & learn">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Richie 个人记忆">
-<meta name="twitter:description" content="生活、工作、学习，点滴记录">
+<meta name="twitter:title" content="Richie's memoirs">
+<meta name="twitter:description" content="life & work & learn">
 
   
-    <link rel="alternative" href="/atom.xml" title="Richie 个人记忆" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Richie&#39;s memoirs" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -34,8 +34,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Richie 个人记忆</a>
+        <a href="/" id="logo">Richie&#39;s memoirs</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">There is no royal road to learning.</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -62,317 +66,49 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-sublime-plugin" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2014/12/30/sublime-plugin/" class="article-date">
-  <time datetime="2014-12-30T14:46:25.000Z" itemprop="datePublished">12月 30 2014</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2014" class="archive-year">2014</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2014/12/30/sublime-plugin/" class="archive-article-date">
+  <time datetime="2014-12-30T14:46:25.000Z" itemprop="datePublished">12月 30</time>
 </a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2014/12/30/sublime-plugin/">Sublime Text 学习笔记</a>
+      <a class="archive-article-title" href="/2014/12/30/sublime-plugin/">Sublime Text 学习笔记</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Preferences-sublime-settings">Preferences.sublime-settings</h2>
-<p>然而在 Windows 和 Linux 上，這些按鍵會與 Sublime Text 2 原本的一些快捷鍵衝突，所以這些快捷鍵預設是關閉的，你可以在偏好設定裡加上以下這行來啟用：</p>
-<pre><code><span class="string">"vintage_ctrl_keys"</span>: <span class="literal">true</span>
-</code></pre><h2 id="sublime_plugin">sublime plugin</h2>
-<pre><code><span class="preprocessor"># 自动对齐代码</span>
-Alignment
-
-<span class="preprocessor"># 自动匹配文件名</span>
-AutoFileName
-
-<span class="preprocessor"># 自动补齐 `css` 前缀</span>
-Autoprefixer
-
-<span class="preprocessor"># Bracket Highlighter 匹配等多种括号: [], (), {}, "", '', &lt;tag&gt;&lt;/tag&gt;, 甚至定制的 Bracket。</span>
-BracketHighlighter
-
-<span class="preprocessor"># 历史剪切板</span>
-Clipboard History
-
-<span class="preprocessor"># 颜色取色器</span>
-Color​Picker
-
-<span class="preprocessor"># javascript 文档注释块</span>
-DocBlockr
-
-<span class="preprocessor"># HTML\CSS 编写神器，提供特殊的简写语法。</span>
-Emmet
-
-<span class="preprocessor"># 在可视区域内查找文本，并快速编辑</span>
-EasyMotion
-
-<span class="preprocessor"># 帮助开发者在不同的编辑器，IDE之间定义和维护统一的编程风格。EditorConfig工程包含一个文件，定义了编程风格，文本编辑器插件集合，让编辑器可以读取该文件并依照它来定义风格。</span>
-EditorConfig
-
-<span class="preprocessor"># 协作编程</span>
-Floobits
-
-<span class="preprocessor"># 文件对比工具，支持第三方对比工具。</span>
-FileDiffs
-
-<span class="preprocessor"># `format` HTML\CSS\JS，混合也支持。</span>
-HTML-CSS-JS Prettify
-
-<span class="preprocessor"># 颜色转化</span>
-Hex-to-HSL-Color
-
-<span class="preprocessor"># `format` HTML\CSS\JS，混合也支持。</span>
-Hayaku
-
-<span class="preprocessor"># 定位 `css` 定义所在位置</span>
-Goto-CSS-Declaration
-
-<span class="preprocessor"># 转码工具</span>
-GBK to UTF8
-
-<span class="preprocessor"># `gist` 代码管理工具。</span>
-Gist
-
-<span class="preprocessor"># 如名， Sulime Text 中集成 Git</span>
-Git
-
-<span class="preprocessor"># 显示一个图标在行号里区域指示是否一行被插入,修改或删除。</span>
-GitGutter
-
-<span class="preprocessor"># 类似 GitGutter</span>
-Modific
-
-<span class="preprocessor"># `less` 转化为 `css`</span>
-Less2Css
-
-<span class="preprocessor"># 样式修改工具</span>
-LiveStyle
-
-<span class="preprocessor"># 自动刷新浏览器</span>
-LiveReload
-
-<span class="preprocessor"># 清除多余空格</span>
-TrailingSpaces
-
-<span class="preprocessor"># `format` JSON数据</span>
-Pretty JSON
-
-<span class="preprocessor"># `Side Bar` 高级功能扩展</span>
-SideBarEnhancements
-
-<span class="preprocessor"># `Javascript` 语法检查</span>
-SublimeLinter
-
-<span class="preprocessor"># `Javascript` 类、模块预编译</span>
-SublimeCodeIntel
-
-<span class="preprocessor"># `css` 顺序排列</span>
-sublime-csscomb
-
-<span class="preprocessor"># 自动化</span>
-SublimeAllAutocomplete
-
-<span class="preprocessor"># 标签|标记|折叠</span>
-BufferScroll
-
-<span class="preprocessor"># `org mode` 扩展支持</span>
-orgmode
-
-<span class="preprocessor"># 支持 `Todo` `task`</span>
-PlainTasks
-
-<span class="preprocessor"># `vi` 扩展</span>
-Vintageous
-
-<span class="preprocessor"># `vi` 模式下，修改行号显示方式</span>
-VintageLines
-
-<span class="preprocessor"># sublime &amp;&amp; vim 两个最爱的编辑器合二为一</span>
-actualvim
-
-<span class="preprocessor"># `markdown` 支持</span>
-MarkdownEditing
-
-<span class="preprocessor"># 调试工具，需要配合 Chrome</span>
-Web Inspector
-
-<span class="preprocessor"># 可以快速获取文件或库</span>
-Nettuts+ Fetch
-</code></pre><h2 id="VI_操作">VI 操作</h2>
-<h4 id="基本编辑">基本编辑</h4>
-<pre><code>i：在当前字符前面进入输入模式  (i=insert)
-
-I：在当前行前面进入输入模式
-
-o：插入一个新行，并且进入输入模式
-
-O：上一行插入一个新行，并且进入输入模式
-
-a：在当前字符后面进入输入模式  (a=append)
-
-A：在当前行后面进入输入模式
-
-s：删除当前字符并且进入输入模式
-
-S：删除当前行并且进入输入模式
-
-r：替换当前字符
-
-R：替换当前字符及其后的字符【当前及其后字符被覆盖】
-
-
-u：撤销最后一次更改
-
-U：撤销光标所在行的所有更改
-
-
-nx：删除由光标位置起始后的n个字符（含光标位置）x =dl(删除当前光标下的字符)
-
-nX：删除由光标位置起始前的n个字符（含光标位置）X =dh(删除当前光标左边的字符)
-
-d0：删至行首
-
-d$：删至行尾
-
-dfa：表示删除从当前光标到光标后面的第一个a字符之间的内容
-
-dd：删除一行（3dd：删除3行）
-
-D：代表d$(删除到行尾的内容)
-
-C：代表c$(修改到行尾的内容)
-
-<span class="bullet">---
-
-</span>yy：复制当前行
-p：粘贴到下一行
-P：粘贴到上一行
-
-<span class="bullet">---
-
-</span>n：查找下一个
-N：查找上一个
-/：进入查找模式，向下搜索
-?：进入查找模式，向上搜索
-
-<span class="bullet">---
-
-</span>:w  保存
-<span class="attribute">:x|:wq</span>   保存并退出
-:q!  不保存并退出
-
-<span class="bullet">---
-
-</span>\&gt;&gt;:    右移两个tab
-
-\&lt;&lt;:    左移两个tab
-
-<span class="bullet">---
-
-</span>zf: 折叠（需加方向键）
-
-zo: 展开（空格也可以展开）
-</code></pre><h4 id="基本移动">基本移动</h4>
-<pre><code>h, <span class="built_in">j</span>, k, l   （左下上右）
-</code></pre><h4 id="光标移动">光标移动</h4>
-<pre><code>H, 移到屏幕顶端的行-home
-
-M, 移到屏幕中央的行-<span class="keyword">middle</span>
-
-L, 移到屏幕底端的行-<span class="keyword">last</span>
-
-G, 直接跳转到文件的底部
-
-gg, 跳转到文件首
-
-nH, 移到屏幕顶端往下的第n行
-
-nL, 移到屏幕底端网上的第n行
-</code></pre><h4 id="单词移动">单词移动</h4>
-<pre><code>w, 光标移动到下一个单词的首字母前
-
-e, 光标移动到所在单词的最后字符前
-
-b, 光标移动到上一个单词的首字母前
-</code></pre><h4 id="行内移动">行内移动</h4>
-<pre><code><span class="number">0</span>, 光标移动到所在行的行首
-
-<span class="variable">$,</span> 光标移动到所在行的行末
-
-^, 光标移动到所在行开始的第一个非空字符
-</code></pre><h4 id="段落移动">段落移动</h4>
-<pre><code><span class="rules">{<span class="rule">, 移动至上一段落的换行
-
-}</span></span>, 移动至下一段落的换行
-
-%, 可以匹配<span class="rules">{<span class="rule">}</span></span>,"",(),<span class="attr_selector">[]</span>之间跳转。
-</code></pre><h4 id="屏幕移动">屏幕移动</h4>
-<pre><code><span class="xml"></span><span class="keyword">^F</span><span class="xml">, 屏幕向下滚动一屏
-
-</span><span class="keyword">^B</span><span class="xml">, 屏幕向上滚动一屏
-
-</span><span class="keyword">^E</span><span class="xml">, 屏幕向下滚动一行
-
-</span><span class="keyword">^Y</span><span class="xml">, 屏幕向上滚动一行
-
-</span><span class="keyword">^D</span><span class="xml">, 屏幕向下滚动半屏
-
-</span><span class="keyword">^U</span><span class="xml">, 屏幕向上滚动半屏</span>
-</code></pre><h4 id="重绘当前屏幕">重绘当前屏幕</h4>
-<pre><code>zt, 当前所在行置为屏幕顶。
-
-zz, 当前所在行置为屏幕中。
-
-zb, 当前所在行置为屏幕底。
-
-<span class="number">50</span><span class="comment">%, 光标定位在文件的中间</span>
-</code></pre><h2 id="参考">参考</h2>
-<p><a href="http://blog.jobbole.com/79326/" target="_blank" rel="external">推荐！Sublime Text 最佳插件列表</a></p>
-<p><a href="http://www.zhihu.com/question/19976788" target="_blank" rel="external">Sublime Text 有哪些实用技巧？</a></p>
-<p><a href="http://blog.csdn.net/wklken/article/details/7533272" target="_blank" rel="external">Linux新手生存笔记——vim训练稿</a></p>
-<p><a href="http://blog.csdn.net/jokes000/article/details/17794375" target="_blank" rel="external">我的Sublime Text 3配置 and vim conf</a></p>
-<p><a href="http://blog.51yip.com/linux/1140.html" target="_blank" rel="external">vim</a></p>
-<p><a href="http://blog.csdn.net/xueziheng/article/details/2048054" target="_blank" rel="external">vi 命令 用法</a></p>
-<p><a href="https://github.com/SublimeText/VintageEx" target="_blank" rel="external">VintageEx</a></p>
-<p><a href="http://blog.csdn.net/iamduoluo/article/details/7890905" target="_blank" rel="external">Sublime 下配置vim模式</a></p>
-<p><a href="https://github.com/tednaleid/sublime-EasyMotion" target="_blank" rel="external">sublime-EasyMotion</a></p>
-<p><a href="https://github.com/SublimeCodeIntel/SublimeCodeIntel" target="_blank" rel="external">SublimeCodeIntel</a></p>
-<p><a href="https://github.com/hayaku/hayaku" target="_blank" rel="external">hayaku</a></p>
-<p><a href="https://github.com/weslly/Nettuts-Fetch" target="_blank" rel="external">Nettuts-Fetch</a></p>
-<p><a href="http://docs.sublimetext.tw/basic-concepts/" target="_blank" rel="external">Sublime Text 手冊</a></p>
-<p><a href="http://opensourcehacker.com/2013/03/04/javascript-autocompletions-and-having-one-for-sublime-text-2/" target="_blank" rel="external">Javascript autocompletions and having one for Sublime Text 2</a></p>
-<p><a href="http://www.camdemy.com/media/6118" target="_blank" rel="external">Sublime Text 2 系列</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yuqigong.github.io/2014/12/30/sublime-plugin/" data-id="jsiey3bwmh5mx7n9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sublime/">sublime</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
 </article>
-
-
   
+  
+    </div></section>
   
 </section>
         
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/technology/">technology</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -440,7 +176,7 @@ zb, 当前所在行置为屏幕底。
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2015 Richie<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Sow nothing, reap nothing.
     </div>
   </div>
 </footer>
