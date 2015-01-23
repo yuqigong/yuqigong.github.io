@@ -3,26 +3,38 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Git 相关知识 | Richie&#39;s memoirs</title>
+  <title>Git multiple coexist | Richie&#39;s memoirs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
-Git 与 Github 的区别
-Git，一个非常强大的版本管理工具。Github 则是一个基于 Git 的日益流行的开源项目托管库。Git 与 svn 的最大区别是，它的使用流程不需要联机，可以">
+  <meta name="description" content="解决多个 Git 账户共存问题
+Git 的管理工具要求每个 Git User 需要生成一对密钥，公钥和私钥。然后把公/私钥放置于：
+//私钥
+用户/.ssh/id_rsa
+//公钥
+用户/.ssh/id_rsa.pub
+并且将公钥注册于基于 Git 的代码托管库，类似Github。当用户用 Git 来管理项目的时候，就是通过生成的公钥和私钥来认证用户的合法性。
+默认情况下，多个 Git 账户无法在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git 相关知识">
+<meta property="og:title" content="Git multiple coexist">
 <meta property="og:url" content="http://yuqigong.github.io/2014/12/14/git-multiple-coexist/">
 <meta property="og:site_name" content="Richie's memoirs">
-<meta property="og:description" content="Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
-Git 与 Github 的区别
-Git，一个非常强大的版本管理工具。Github 则是一个基于 Git 的日益流行的开源项目托管库。Git 与 svn 的最大区别是，它的使用流程不需要联机，可以">
+<meta property="og:description" content="解决多个 Git 账户共存问题
+Git 的管理工具要求每个 Git User 需要生成一对密钥，公钥和私钥。然后把公/私钥放置于：
+//私钥
+用户/.ssh/id_rsa
+//公钥
+用户/.ssh/id_rsa.pub
+并且将公钥注册于基于 Git 的代码托管库，类似Github。当用户用 Git 来管理项目的时候，就是通过生成的公钥和私钥来认证用户的合法性。
+默认情况下，多个 Git 账户无法在">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git 相关知识">
-<meta name="twitter:description" content="Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
-Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。
-Git 与 Github 的区别
-Git，一个非常强大的版本管理工具。Github 则是一个基于 Git 的日益流行的开源项目托管库。Git 与 svn 的最大区别是，它的使用流程不需要联机，可以">
+<meta name="twitter:title" content="Git multiple coexist">
+<meta name="twitter:description" content="解决多个 Git 账户共存问题
+Git 的管理工具要求每个 Git User 需要生成一对密钥，公钥和私钥。然后把公/私钥放置于：
+//私钥
+用户/.ssh/id_rsa
+//公钥
+用户/.ssh/id_rsa.pub
+并且将公钥注册于基于 Git 的代码托管库，类似Github。当用户用 Git 来管理项目的时候，就是通过生成的公钥和私钥来认证用户的合法性。
+默认情况下，多个 Git 账户无法在">
 
   
     <link rel="alternative" href="/atom.xml" title="Richie&#39;s memoirs" type="application/atom+xml">
@@ -91,7 +103,7 @@ Git，一个非常强大的版本管理工具。Github 则是一个基于 Git �
         
   
     <h1 class="article-title" itemprop="name">
-      Git 相关知识
+      Git multiple coexist
     </h1>
   
 
@@ -99,297 +111,7 @@ Git，一个非常强大的版本管理工具。Github 则是一个基于 Git �
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。</p>
-<p>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
-<h2 id="Git_与_Github_的区别">Git 与 Github 的区别</h2>
-<p>Git，一个非常强大的版本管理工具。Github 则是一个基于 Git 的日益流行的开源项目托管库。Git 与 svn 的最大区别是，它的使用流程不需要联机，可以先将对代码的修改，评论，保存在本机。等上网之后，再实时推送过去。同时它创建分支与合并分支更容易，推送速度也更快，配合 Github 提交需求也更容易。</p>
-<p><strong>总之，GitHub 是个网站，Git 是个软件。</strong></p>
-<h2 id="Git_常用功能">Git 常用功能</h2>
-<p><strong>初始化配置</strong></p>
-<pre><code><span class="preprocessor">#配置使用git仓库的人员姓名</span>
-git config --<span class="keyword">global</span> user.name <span class="string">"Your Name Comes Here"</span>
-
-<span class="preprocessor">#配置使用git仓库的人员email</span>
-git config --<span class="keyword">global</span> user.email yourname@yourdomain.example.com
-
-<span class="preprocessor">#配置到缓存 默认15分钟</span>
-git config --<span class="keyword">global</span> credential.helper cache
-
-<span class="preprocessor">#配置缓存时间</span>
-git config --<span class="keyword">global</span> credential.helper <span class="comment">'cache --timeout=3600'</span>
-
-<span class="preprocessor">#配置显示</span>
-git config --<span class="keyword">global</span> color.ui <span class="literal">true</span>
-
-<span class="preprocessor">#设置别名</span>
-git config --<span class="keyword">global</span> <span class="keyword">alias</span>.co checkout
-git config --<span class="keyword">global</span> <span class="keyword">alias</span>.ci commit
-git config --<span class="keyword">global</span> <span class="keyword">alias</span>.st status
-git config --<span class="keyword">global</span> <span class="keyword">alias</span>.br branch
-
-<span class="preprocessor">#配置编辑器</span>
-git config --<span class="keyword">global</span> core.editor <span class="string">"subl"</span>
-</code></pre><p><strong>基本使用</strong></p>
-<pre><code><span class="preprocessor">#看到当前分支状态</span>
-git status
-
-<span class="preprocessor">#克隆代码</span>
-git clone
-
-<span class="preprocessor">#拉取代码</span>
-git pull
-
-<span class="preprocessor">#添加代码</span>
-git add
-
-<span class="preprocessor">#提交代码</span>
-git commit
-
-<span class="preprocessor">#推送代码</span>
-git push
-
-<span class="preprocessor">#在远端 origin 也创建该分支</span>
-git push origin develop
-</code></pre><p><strong>切换\分支\对比\合并</strong></p>
-<pre><code><span class="preprocessor">#切换</span>
-git checkout
-
-<span class="preprocessor">#切换到 Master 分支</span>
-git checkout master
-
-<span class="preprocessor">#创建 develop 分支, 并切换到 develop 分支</span>
-git checkout -b develop
-
-<span class="preprocessor">#分支</span>
-git branch
-
-<span class="preprocessor">#创建 develop 分支</span>
-git branch develop
-
-<span class="preprocessor">#删除 develop 分支</span>
-git branch -d develop
-
-<span class="preprocessor">#对比</span>
-git diff
-
-<span class="preprocessor">#合并</span>
-git merge
-
-<span class="preprocessor">#对 Develop 分支进行合并</span>
-git merge --no-ff develop
-</code></pre><p><em>默认情况下，Git执行”快进式合并”（fast-farward merge），会直接将 Master 分支指向 Develop 分支。使用 <code>--no-ff</code> 参数后，会执行正常合并，在 Master 分支上生成一个新节点。</em> <strong>为了保证版本演进的清晰，我们希望采用这种做法。</strong></p>
-<p><strong>查看、添加、提交、删除、找回，重置修改文件</strong></p>
-<pre><code><span class="input"><span class="prompt">git help &lt;command&gt;</span>  <span class="comment"># 显示command的help</span></span>
-<span class="input"><span class="prompt">git show            # 显示某次提交的内容
-git show $id
-
-git co  -- &lt;file&gt;</span>   <span class="comment"># 抛弃工作区修改</span></span>
-<span class="input"><span class="prompt">git co  .           # 抛弃工作区修改
-
-git add &lt;file&gt;</span>      <span class="comment"># 将工作文件修改提交到本地暂存区</span></span>
-<span class="input"><span class="prompt">git add .           # 将所有修改过的工作文件提交暂存区
-
-git rm &lt;file&gt;</span>       <span class="comment"># 从版本库中删除文件</span></span>
-<span class="input"><span class="prompt">git rm &lt;file&gt;</span> --cached  <span class="comment"># 从版本库中删除文件，但不删除文件</span></span>
-<span class="input"><span class="prompt">
-git reset &lt;file&gt;</span>    <span class="comment"># 从暂存区恢复到工作文件</span></span>
-git reset -- .      <span class="comment"># 从暂存区恢复到工作文件</span>
-git reset --hard    <span class="comment"># 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改</span>
-
-git ci &lt;file&gt;
-<span class="input"><span class="prompt">git ci .
-git ci -a           # 将git add, git rm和git ci等操作都合并在一起做
-git ci -am "some comments"
-git ci --amend      # 修改最后一次提交记录
-
-git revert &lt;$id&gt;</span>    <span class="comment"># 恢复某次提交的状态，恢复动作本身也创建了一次提交对象</span></span>
-git revert <span class="constant">HEAD</span>     <span class="comment"># 恢复最后一次提交的状态</span>
-</code></pre><p><strong>查看文件diff</strong></p>
-<pre><code><span class="input"><span class="prompt">git diff &lt;file&gt;</span>     <span class="comment"># 比较当前文件和暂存区文件差异</span></span>
-<span class="input"><span class="prompt">git diff
-git diff &lt;$id1&gt;</span> &lt;<span class="variable">$id2</span>&gt;   <span class="comment"># 比较两次提交之间的差异</span></span>
-git diff &lt;branch1&gt;..&lt;branch2&gt; <span class="comment"># 在两个分支之间比较</span>
-git diff --staged   <span class="comment"># 比较暂存区和版本库差异</span>
-git diff --cached   <span class="comment"># 比较暂存区和版本库差异</span>
-git diff --stat     <span class="comment"># 仅仅比较统计信息</span>
-</code></pre><p><strong>查看提交记录</strong></p>
-<pre><code>git <span class="built_in">log</span>
-git <span class="built_in">log</span> &lt;<span class="built_in">file</span>&gt;      <span class="comment"># 查看该文件每次提交记录</span>
-git <span class="built_in">log</span> -p &lt;<span class="built_in">file</span>&gt;   <span class="comment"># 查看每次详细修改内容的diff</span>
-git <span class="built_in">log</span> -p -<span class="number">2</span>       <span class="comment"># 查看最近两次详细修改内容的diff</span>
-git <span class="built_in">log</span> <span class="comment">--stat      #查看提交统计信息</span>
-</code></pre><p><strong>回溯到历史版本</strong></p>
-<pre><code>-<span class="ruby">-soft                     <span class="comment">#回溯到已提交到索引但未提交到版本库的状态</span>
-</span>-<span class="ruby">-hard                     <span class="comment">#将文件内容也一同回溯</span>
-</span>-<span class="ruby">-mixed                    <span class="comment">#默认选项</span>
-</span>git reset                    #回溯到git add之前的状态
-git reset commit-id        #回溯指定版本的修改
-git reset --soft            #回溯到git add之后的状态
-</code></pre><p><strong>还原已提交的修改</strong></p>
-<pre><code>git revert HEAD            <span class="preprocessor">#还原最近一次提交的修改</span>
-git revert commit-<span class="keyword">id</span>        <span class="preprocessor">#还原指定版本的修改</span>
-</code></pre><p><strong>取得Git仓库</strong></p>
-<pre><code><span class="preprocessor">#Clone远程版本库</span>
-git clone git@your.repo.git
-
-<span class="preprocessor">#初始化一个版本仓库</span>
-git init
-
-<span class="preprocessor">#添加远程版本库origin，语法为 git remote add [shortname] [url]</span>
-git remote add origin git@your.repo.git
-
-<span class="preprocessor">#查看远程仓库</span>
-git remote -v
-
-<span class="preprocessor">#拉取远程仓库的代码，例： 远程仓库 origin 下 master 分支</span>
-git pull origin master
-</code></pre><p><strong>提交你的修改</strong></p>
-<pre><code><span class="preprocessor">#添加当前修改的文件到暂存区</span>
-git add .
-
-<span class="preprocessor">#如果你自动追踪文件，包括你已经手动删除的，状态为Deleted的文件</span>
-git add -u
-
-<span class="preprocessor">#提交你的修改</span>
-git commit –m <span class="string">"你的注释"</span>
-
-<span class="preprocessor">#推送你的更新到远程服务器,语法为 git push [远程名] [本地分支]:[远程分支]</span>
-git push origin master
-
-<span class="preprocessor">#查看文件状态</span>
-git status
-
-<span class="preprocessor">#跟踪新文件</span>
-git add readme.txt
-
-<span class="preprocessor">#从当前跟踪列表移除文件，并完全删除</span>
-git rm readme.txt
-
-<span class="preprocessor">#仅在暂存区删除，保留文件在当前目录，不再跟踪</span>
-git rm –cached readme.txt
-
-<span class="preprocessor">#重命名文件</span>
-git mv reademe.txt readme
-
-<span class="preprocessor">#查看提交的历史记录</span>
-git log
-
-<span class="preprocessor">#修改最后一次提交注释的，利用–amend参数</span>
-git commit --amend
-
-<span class="preprocessor">#忘记提交某些修改，下面的三条命令只会得到一个提交。</span>
-git commit –m<span class="string">'add readme.txt'</span>
-git add readme_forgotten
-git commit –amend
-
-<span class="preprocessor">#假设你已经使用git add .，将修改过的文件a、b加到暂存区</span>
-
-<span class="preprocessor">#现在你只想提交a文件，不想提交b文件，应该这样</span>
-git reset<span class="constant"> HEAD </span>b
-
-<span class="preprocessor">#取消对文件的修改</span>
-git checkout –- readme.txt
-</code></pre><p><strong>查看、切换、创建和删除分支</strong></p>
-<pre><code><span class="input"><span class="prompt">git br -r           # 查看远程分支
-git br &lt;new_branch&gt;</span> <span class="comment"># 创建新的分支</span></span>
-<span class="input"><span class="prompt">git br -v           # 查看各个分支最后提交信息
-git br --merged     # 查看已经被合并到当前分支的分支
-git br --no-merged  # 查看尚未被合并到当前分支的分支
-
-git co &lt;branch&gt;</span>     <span class="comment"># 切换到某个分支</span></span>
-<span class="input"><span class="prompt">git co -b &lt;new_branch&gt;</span> <span class="comment"># 创建新的分支，并且切换过去</span></span>
-<span class="input"><span class="prompt">git co -b &lt;new_branch&gt;</span> &lt;branch&gt;  <span class="comment"># 基于branch创建新的new_branch</span></span>
-<span class="input"><span class="prompt">
-git co $id          # 把某次历史提交记录checkout出来，但无分支信息，切换到其他分支会自动删除
-git co $id -b &lt;new_branch&gt;</span>  <span class="comment"># 把某次历史提交记录checkout出来，创建成一个分支</span></span>
-<span class="input"><span class="prompt">
-git br -d &lt;branch&gt;</span>  <span class="comment"># 删除某个分支</span></span>
-<span class="input"><span class="prompt">git br -D &lt;branch&gt;</span>  <span class="comment"># 强制删除某个分支 (未被合并的分支被删除的时候需要强制)</span></span>
-</code></pre><p><strong>分支合并和rebase</strong></p>
-<pre><code><span class="input"><span class="prompt">git merge &lt;branch&gt;</span>               <span class="comment"># 将branch分支合并到当前分支</span></span>
-<span class="input"><span class="prompt">git merge origin/master --no-ff  # 不要Fast-Foward合并，这样可以生成merge提交
-
-git rebase master &lt;branch&gt;</span>       <span class="comment"># 将master rebase到branch，相当于：</span></span>
-<span class="input"><span class="prompt">git co &lt;branch&gt;</span> &amp;&amp; git rebase master &amp;&amp; git co master &amp;&amp; git merge &lt;branch&gt;</span>
-</code></pre><p><strong>Git补丁管理(方便在多台机器上开发同步时用)</strong></p>
-<pre><code><span class="input"><span class="prompt">git diff &gt;</span> ../sync.patch         <span class="comment"># 生成补丁</span></span>
-git apply ../sync.patch          <span class="comment"># 打补丁</span>
-git apply --check ../sync.patch  <span class="comment">#测试补丁能否成功</span>
-</code></pre><p><strong>Git暂存管理</strong></p>
-<pre><code>git stash                        <span class="comment"># 暂存</span>
-git stash <span class="keyword">list</span>                   <span class="comment"># 列所有stash</span>
-git stash apply                  <span class="comment"># 恢复暂存的内容</span>
-git stash drop                   <span class="comment"># 删除暂存区</span>
-</code></pre><p><strong>Git远程分支管理</strong></p>
-<pre><code>git pull                         <span class="comment"># 抓取远程仓库所有分支更新并合并到本地</span>
-git pull --<span class="keyword">no</span>-ff                 <span class="comment"># 抓取远程仓库所有分支更新并合并到本地，不要快进合并</span>
-git fetch origin                 <span class="comment"># 抓取远程仓库更新</span>
-git merge origin/master          <span class="comment"># 将远程主分支合并到本地当前分支</span>
-git co --track origin/branch     <span class="comment"># 跟踪某个远程分支创建相应的本地分支</span>
-git co -b &lt;local_branch&gt; origin/&lt;remote_branch&gt;  <span class="comment"># 基于远程分支创建本地分支，功能同上</span>
-
-git <span class="keyword">push</span>                         <span class="comment"># push所有分支</span>
-git <span class="keyword">push</span> origin master           <span class="comment"># 将本地主分支推到远程主分支</span>
-git <span class="keyword">push</span> -u origin master        <span class="comment"># 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)</span>
-git <span class="keyword">push</span> origin &lt;local_branch&gt;   <span class="comment"># 创建远程分支， origin是远程仓库名</span>
-git <span class="keyword">push</span> origin &lt;local_branch&gt;:&lt;remote_branch&gt;  <span class="comment"># 创建远程分支</span>
-git <span class="keyword">push</span> origin :&lt;remote_branch&gt;  <span class="comment">#先删除本地分支(git br -d &lt;branch&gt;)，然后再push删除远程分支</span>
-</code></pre><p><strong>基本的分支管理</strong></p>
-<pre><code><span class="preprocessor">#创建一个分支</span>
-git branch iss53
-
-<span class="preprocessor">#切换工作目录到iss53</span>
-git chekcout iss53
-
-<span class="preprocessor">#将上面的命令合在一起，创建iss53分支并切换到iss53</span>
-git chekcout –b iss53
-
-<span class="preprocessor">#合并iss53分支，当前工作目录为master</span>
-git merge iss53
-
-<span class="preprocessor">#合并完成后，没有出现冲突，删除iss53分支</span>
-git branch –d iss53
-
-<span class="preprocessor">#拉去远程仓库的数据，语法为 git fetch [remote-name]</span>
-git fetch
-
-<span class="preprocessor">#fetch 会拉去最新的远程仓库数据，但不会自动到当前目录下，要自动合并</span>
-git pull
-
-<span class="preprocessor">#查看远程仓库的信息</span>
-git remote show origin
-
-<span class="preprocessor">#建立本地的dev分支追踪远程仓库的develop分支</span>
-git checkout –b dev origin/develop
-</code></pre><p><strong>Git远程仓库管理</strong></p>
-<pre><code>git remote -v                    <span class="comment"># 查看远程服务器地址和仓库名称</span>
-git remote show origin           <span class="comment"># 查看远程服务器仓库状态</span>
-git remote <span class="built_in">add</span> origin git@ github:robbin/robbin_site.git         <span class="comment"># 添加远程仓库地址</span>
-git remote <span class="built_in">set</span>-url origin git@ github.com:robbin/robbin_site.git <span class="comment"># 设置远程仓库地址(用于修改远程仓库地址)</span>
-git remote rm &lt;repository&gt;       <span class="comment"># 删除远程仓库</span>
-</code></pre><p><strong>创建远程仓库</strong></p>
-<pre><code>git clone --bare robbin_site robbin_site.git  <span class="comment"># 用带版本的项目创建纯版本仓库</span>
-scp -r my_project.git git<span class="variable">@git</span>.csdn.net:~      <span class="comment"># 将纯仓库上传到服务器上</span>
-
-<span class="keyword">mkdir</span> robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git --bare init <span class="comment"># 在服务器创建纯仓库</span>
-git remote add origin git<span class="variable">@github</span>.com:robbin/robbin_site.git    <span class="comment"># 设置远程仓库地址</span>
-git <span class="keyword">push</span> -u origin master                                      <span class="comment"># 客户端首次提交</span>
-git <span class="keyword">push</span> -u origin develop  <span class="comment"># 首次将本地develop分支提交到远程develop分支，并且track</span>
-
-git remote set-head origin master   <span class="comment"># 设置远程仓库的HEAD指向master分支</span>
-</code></pre><p><strong>也可以命令设置跟踪远程库和本地库</strong></p>
-<pre><code>git branch --<span class="keyword">set</span>-upstream master origin/master
-git branch --<span class="keyword">set</span>-upstream develop origin/develop
-</code></pre><p><strong>创建一个镜像版本库</strong></p>
-<pre><code>git clone 原始版本库路径 镜像版本库路径(<span class="built_in">local</span>)
-git fetch origin 更新 origin 分支。
-(如果 origin 分支不是最新的原始版本库，会产生错误的补丁文件,不会自动<span class="built_in">merge</span>,仅下载 &amp; 更新索引)
-git rebase origin 将工作迁移到最新原始版本库基础上
-</code></pre><p><strong>其他技巧</strong></p>
-<pre><code><span class="built_in">echo</span> <span class="string">"test"</span>&gt;.gitignore        <span class="comment">#增加到忽略列表</span>
-<span class="built_in">echo</span> <span class="string">"test"</span> &gt;&gt; README.md    <span class="comment">#创建 README.md并写入test</span>
-touch test                    <span class="comment">#创建 test 文件</span>
-</code></pre><h2 id="解决多个_Git_账户共存问题">解决多个 Git 账户共存问题</h2>
+        <h2 id="解决多个_Git_账户共存问题">解决多个 Git 账户共存问题</h2>
 <p>Git 的管理工具要求每个 Git User 需要生成一对密钥，公钥和私钥。然后把公/私钥放置于：</p>
 <pre><code><span class="comment">//私钥</span>
 用户<span class="regexp">/.ssh/i</span>d_rsa
@@ -465,23 +187,15 @@ Could not open a connection to your authentication agent
 <span class="comment">// 然后执行 $ ssh-add 就好了。</span>
 </code></pre><p>参考</p>
 <p><a href="http://www.freshblurbs.com/blog/2013/06/22/github-multiple-ssh-keys.html" target="_blank" rel="external">Using Multiple SSH Keys with Github</a></p>
-<p><a href="https://help.github.com/articles/generating-ssh-keys#platform-windows" target="_blank" rel="external">Generating SSH Keys</a></p>
-<p><a href="https://wiki.archlinux.org/index.php/SSH_Keys_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87" target="_blank" rel="external">SSH Keys (简体中文)</a>)</p>
-<p><a href="http://www.ibm.com/developerworks/cn/linux/security/openssh/part2/" target="_blank" rel="external">通用线程: OpenSSH 密钥管理，第 2 部分</a></p>
 <p><a href="http://chiyx.iteye.com/blog/1872447" target="_blank" rel="external">配置多个git远程仓库的ssh-Key切换</a></p>
 <p><a href="https://github.com/yuqigong/helloWorld/blob/master/git.md" target="_blank" rel="external">多个平台git共存</a></p>
 <p><a href="http://wlog.cn/soft/git-ssh-server-for-debian.html" target="_blank" rel="external">搭建通过 ssh 访问的 Git 服务器</a></p>
 <p><a href="http://riny.net/2014/git-ssh-key/" target="_blank" rel="external">git生成ssh key及本地解决多个ssh key的问题</a></p>
-<p><a href="http://callmepeanut.blog.51cto.com/7756998/1304912" target="_blank" rel="external">GitHub使用入门</a></p>
-<p><a href="http://blog.csdn.net/hutaoer06051/article/details/8275069" target="_blank" rel="external">git config命令使用第一篇——介绍，基本操作，增删改查</a></p>
-<p>Git</p>
-<p><a href="http://gitbook.liuhui998.com/" target="_blank" rel="external">Git Community Book 中文版</a></p>
-<p><a href="http://git-scm.com/book" target="_blank" rel="external">Pro Git</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yuqigong.github.io/2014/12/14/git-multiple-coexist/" data-id="apson2vt0vdcpw1y" class="article-share-link">Share</a>
+      <a data-url="http://yuqigong.github.io/2014/12/14/git-multiple-coexist/" data-id="wgew3zruh76ktqzu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
@@ -520,7 +234,7 @@ Could not open a connection to your authentication agent
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/technology/">technology</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/technology/">technology</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -529,7 +243,7 @@ Could not open a connection to your authentication agent
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/">mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/">mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -547,7 +261,7 @@ Could not open a connection to your authentication agent
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -557,6 +271,10 @@ Could not open a connection to your authentication agent
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/01/23/git-useing/">Git useing</a>
+          </li>
         
           <li>
             <a href="/2014/12/30/sublime-plugin/">Sublime Text 学习笔记</a>
@@ -572,10 +290,6 @@ Could not open a connection to your authentication agent
         
           <li>
             <a href="/2014/12/23/ie-filter-transition/">ie视觉滤镜和动画效果</a>
-          </li>
-        
-          <li>
-            <a href="/2014/12/19/ie6-select/">ie6 select 覆盖层问题</a>
           </li>
         
       </ul>

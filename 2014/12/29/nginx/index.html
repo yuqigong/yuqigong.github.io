@@ -5,54 +5,33 @@
   
   <title>nginx 学习 | Richie&#39;s memoirs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="nginx 命令
-启动
-start nginx
-快速退出
-nginx -s stop
-优雅退出
-nginx -s quit
-更换配置，启动新的工作进程，优雅的关闭以往的工作进程
-nginx -s reload
-重新打开日志文件
-nginx -s reopen
-可以在命令行运行tasklist命令来查看nginx进程：
-tasklist /fi 'imagename eq nginx.exe'
-ng">
+  <meta name="description" content="nginx 命令 
+start nginx            # 启动
+nginx -s stop         # 快速退出
+nginx -s quit         # 优雅退出
+nginx -s reload     # 更换配置，启动新的工作进程，优雅的关闭以往的工作进程
+nginx -s reopen     # 重新打开日志文件
+可以在命令行运行tasklist命令来查看ng">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx 学习">
 <meta property="og:url" content="http://yuqigong.github.io/2014/12/29/nginx/">
 <meta property="og:site_name" content="Richie's memoirs">
-<meta property="og:description" content="nginx 命令
-启动
-start nginx
-快速退出
-nginx -s stop
-优雅退出
-nginx -s quit
-更换配置，启动新的工作进程，优雅的关闭以往的工作进程
-nginx -s reload
-重新打开日志文件
-nginx -s reopen
-可以在命令行运行tasklist命令来查看nginx进程：
-tasklist /fi 'imagename eq nginx.exe'
-ng">
+<meta property="og:description" content="nginx 命令 
+start nginx            # 启动
+nginx -s stop         # 快速退出
+nginx -s quit         # 优雅退出
+nginx -s reload     # 更换配置，启动新的工作进程，优雅的关闭以往的工作进程
+nginx -s reopen     # 重新打开日志文件
+可以在命令行运行tasklist命令来查看ng">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx 学习">
-<meta name="twitter:description" content="nginx 命令
-启动
-start nginx
-快速退出
-nginx -s stop
-优雅退出
-nginx -s quit
-更换配置，启动新的工作进程，优雅的关闭以往的工作进程
-nginx -s reload
-重新打开日志文件
-nginx -s reopen
-可以在命令行运行tasklist命令来查看nginx进程：
-tasklist /fi 'imagename eq nginx.exe'
-ng">
+<meta name="twitter:description" content="nginx 命令 
+start nginx            # 启动
+nginx -s stop         # 快速退出
+nginx -s quit         # 优雅退出
+nginx -s reload     # 更换配置，启动新的工作进程，优雅的关闭以往的工作进程
+nginx -s reopen     # 重新打开日志文件
+可以在命令行运行tasklist命令来查看ng">
 
   
     <link rel="alternative" href="/atom.xml" title="Richie&#39;s memoirs" type="application/atom+xml">
@@ -129,20 +108,15 @@ ng">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="nginx_命令">nginx 命令</h2>
-<p>启动</p>
-<pre><code><span class="operator"><span class="keyword">start</span> nginx</span>
-</code></pre><p>快速退出</p>
-<pre><code>nginx <span class="operator">-s</span> stop
-</code></pre><p>优雅退出</p>
-<pre><code>nginx <span class="operator">-s</span> quit
-</code></pre><p>更换配置，启动新的工作进程，优雅的关闭以往的工作进程</p>
-<pre><code>nginx <span class="operator">-s</span> reload
-</code></pre><p>重新打开日志文件</p>
-<pre><code>nginx <span class="operator">-s</span> reopen
+        <p><strong> nginx 命令 </strong></p>
+<pre><code>start nginx            <span class="comment"># 启动</span>
+nginx <span class="operator">-s</span> stop         <span class="comment"># 快速退出</span>
+nginx <span class="operator">-s</span> quit         <span class="comment"># 优雅退出</span>
+nginx <span class="operator">-s</span> reload     <span class="comment"># 更换配置，启动新的工作进程，优雅的关闭以往的工作进程</span>
+nginx <span class="operator">-s</span> reopen     <span class="comment"># 重新打开日志文件</span>
 </code></pre><p>可以在命令行运行tasklist命令来查看nginx进程：</p>
 <pre><code>tasklist /<span class="keyword">fi</span> <span class="string">"imagename eq nginx.exe"</span>
-</code></pre><h2 id="nginx_配置">nginx 配置</h2>
+</code></pre><p><strong> nginx 配置 </strong></p>
 <pre><code><span class="title">http</span> {
   <span class="title">server</span> {
     <span class="comment">#1.侦听80端口</span>
@@ -173,7 +147,7 @@ ng">
     }
   }
 }
-</code></pre><h2 id="nginx_issue">nginx issue</h2>
+</code></pre><p><strong> nginx issue </strong></p>
 <pre><code><span class="number">2012</span>/<span class="number">04</span>/<span class="number">02</span> <span class="number">13</span>:<span class="number">55</span>:<span class="number">59</span> [emerg] <span class="number">7864</span>#<span class="number">2376</span>: bind() <span class="keyword">to</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span>:<span class="number">80</span> failed (<span class="number">10013</span>: An attempt was made <span class="keyword">to</span> <span class="keyword">access</span> a socket <span class="keyword">in</span> a way forbidden by its <span class="keyword">access</span> permissions)
 </code></pre><p>在 cmd 中，运行以下命令：</p>
 <pre><code>netstat -aon <span class="string">| findstr :80</span>
@@ -191,7 +165,7 @@ ng">
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yuqigong.github.io/2014/12/29/nginx/" data-id="t8dfqh3jk5r58z1z" class="article-share-link">Share</a>
+      <a data-url="http://yuqigong.github.io/2014/12/29/nginx/" data-id="i7e4fgdy7exgcze3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
@@ -230,7 +204,7 @@ ng">
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/technology/">technology</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/learn/">learn</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/technology/">technology</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/tools/">tools</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -239,7 +213,7 @@ ng">
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/">mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/">mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sublime/">sublime</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -257,7 +231,7 @@ ng">
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/12/">December 2014</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -267,6 +241,10 @@ ng">
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/01/23/git-useing/">Git useing</a>
+          </li>
         
           <li>
             <a href="/2014/12/30/sublime-plugin/">Sublime Text 学习笔记</a>
@@ -282,10 +260,6 @@ ng">
         
           <li>
             <a href="/2014/12/23/ie-filter-transition/">ie视觉滤镜和动画效果</a>
-          </li>
-        
-          <li>
-            <a href="/2014/12/19/ie6-select/">ie6 select 覆盖层问题</a>
           </li>
         
       </ul>
